@@ -1,8 +1,6 @@
-package SedmaNedeljaMiniProjekat;
+package MiniProjekat;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 public class Test {
     public static void main(String[] args) {
@@ -96,8 +94,6 @@ public class Test {
         //Dodavanje svih recepata u listu
         ArrayList<Recipe>sviRecepti=new ArrayList<>();
 
-//        Recipe[]receptiArray=new Recipe[sviRecepti.size()];
-//        receptiArray=sviRecepti.toArray(receptiArray);
         sviRecepti.add(rec1);
         sviRecepti.add(rec2);
         sviRecepti.add(rec3);
@@ -179,13 +175,5 @@ public class Test {
             System.out.println(el.getNazivRecepta());
         }
         System.out.println("********************************************************************");
-        //Poredjaj recepte po tezini
-//        for(int i=0;i<sviRecepti.size();i++){
-//            for(int j=i+1;j< sviRecepti.size();j++){
-////                if(sviRecepti[i].getD
-
-
-//                }
-//        }
     }
 }
