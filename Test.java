@@ -1,6 +1,7 @@
 package MiniProjekat;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Test {
     public static void main(String[] args) {
@@ -175,5 +176,25 @@ public class Test {
             System.out.println(el.getNazivRecepta());
         }
         System.out.println("********************************************************************");
+        //Sortiranje recepata po tezini
+        Recipe[]receptiArray=new Recipe[sviRecepti.size()];
+        receptiArray=sviRecepti.toArray(receptiArray);
+
+        for (int i = 0; i < receptiArray.length - 1; i++){
+            int index = i;
+            for (int j = i + 1; j < receptiArray.length; j++){
+                if (receptiArray[j].getDifficulty().compareTo(receptiArray[index].getDifficulty()) >= 0){
+                    index = j;
+                }
+            }
+            Recipe smallerNumber = receptiArray[index];
+            receptiArray[index] = receptiArray[i];
+            receptiArray[i] = smallerNumber;
+        }
+        sviRecepti =new ArrayList<Recipe>(Arrays.asList(receptiArray));
+
+        for(var el:sviRecepti){
+            System.out.println(el.getNazivRecepta()+" - "+el.getDifficulty());
+        }
     }
 }
